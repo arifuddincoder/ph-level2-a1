@@ -43,3 +43,16 @@ class Car extends Vehicle {
 		return (this.model = modelInfo);
 	}
 }
+
+// Description: Write a function that takes a string | number and returns:
+
+// The length if it's a string
+// The number multiplied by 2 if it's a number
+
+function processValue(value: string | number): number {
+	if (typeof value === "string") {
+		return value.length;
+	} else if (typeof value === "number") {
+		return value * 2;
+	}
+}
