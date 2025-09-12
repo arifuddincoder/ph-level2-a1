@@ -56,3 +56,44 @@ function processValue(value: string | number): number {
 		return value * 2;
 	}
 }
+
+// Description: Define an interface Product and create a function to find the product with the highest price in an array. If the array is empty, return null.
+
+// Interface & Function Signature:
+
+// interface Product {
+//   name: string;
+//   price: number;
+// }
+
+// function getMostExpensiveProduct(products: Product[]): Product | null
+
+interface Product {
+	name: string;
+	price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+	if (products.length === 0) return null;
+
+	return products.reduce((max, product) => (product.price > max.price ? product : max));
+}
+
+// Problem 7:
+// Description:
+
+// Define an enum Day for the days of the week.
+// Create a function that returns "Weekday" or "Weekend" based on the input day.
+// Enum & Function Signature:
+
+// enum Day {
+//   Monday,
+//   Tuesday,
+//   Wednesday,
+//   Thursday,
+//   Friday,
+//   Saturday,
+//   Sunday
+// }
+
+// function getDayType(day: Day): string
