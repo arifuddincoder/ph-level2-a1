@@ -114,3 +114,23 @@ function getDayType(day: Day): string {
 	}
 	return "Weekday";
 }
+
+// Description: Create an async function that:
+
+// Returns the square of a number after 1 second
+// Rejects if the number is negative
+// Function Signature:
+
+// async function squareAsync(n: number): Promise<number>
+
+async function squareAsync(n: number): Promise<number> {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (n < 0) {
+				reject(new Error("Number is negative"));
+			} else {
+				resolve(n * n);
+			}
+		}, 1000);
+	});
+}
